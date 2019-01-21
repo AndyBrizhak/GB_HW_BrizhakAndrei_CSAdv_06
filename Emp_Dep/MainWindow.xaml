@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <ListView x:Name="ListViewDbDep"/>
+        <ListView x:Name="ListViewDbEmp"/>
+
+
     </Grid>
 </Window>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,15 @@ namespace Emp_Dep
             LName = _lName;
             Age = _age;
             DepID = _depID;
+        }
+
+        public override string ToString()
+        {
+            //Person person = new Person { Name = "Tom", Age = 23 };
+
+            //Console.WriteLine("Имя: {0}  Возраст: {1}", person.Name, person.Age);
+            return FName ;
+
         }
     }
 
