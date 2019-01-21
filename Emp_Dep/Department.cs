@@ -25,11 +25,12 @@ namespace Emp_Dep
             set
             {
                 this.depName = value;
-                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs());
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(DepName));
             }
            
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
     }
 }
