@@ -23,18 +23,17 @@ namespace Emp_Dep
         /// Добавляет Департамент 
         /// </summary>
         /// <param name="NameDep">Имя нового департамента</param>
-        /// <param name="depDb">Коллекция департаментов</param>
-        public void AddDep(string NameDep, ObservableCollection<Department> depDb)
+        public void AddDep(string nameDep)
         {
-            depDb.Add(new Department(NameDep, depDb.Count+1));
+          DbDepartments.Add(new Department(nameDep, DbDepartments.Count + 1));
+           
         }
 
         /// <summary>
         /// Удаление департамента и всех его сотрудников
         /// </summary>
         /// <param name="id">Идентификатор департамента</param>
-        /// <param name="depDb">Коллекция департаментов</param>
-        public void DelDep(int id, ObservableCollection<Department> depDb)
+        public void DelDep(int id)
         {
             for (int i = DbEmployees.Count-1; i >=0 ; i--)
             {
@@ -44,11 +43,13 @@ namespace Emp_Dep
                 }
             }
 
-            for (int i = depDb.Count - 1; i >= 0; i--)
+            for (int i = DbDepartments.Count - 1; i >= 0; i--)
             {
-                if(depDb[i].DepId == id) depDb.RemoveAt(i);
+                if(DbDepartments[i].DepId == id) DbDepartments.RemoveAt(i);
             }
         }
+
+       
 
         //public bool CheckUnic(string nameDep, ObservableCollection<Department> depCollection)
         //{
