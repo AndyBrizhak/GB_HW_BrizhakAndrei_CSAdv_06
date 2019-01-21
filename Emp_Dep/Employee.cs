@@ -9,5 +9,32 @@ using System.Runtime.Versioning;
 
 namespace Emp_Dep
 {
-    
+    public class Employee : INotifyPropertyChanged
+    {
+        public string fName;
+        private string lName;
+        private int age;
+        private int depID;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public string FName
+        {
+            get => fName;
+            set
+            {
+                fName = value;
+                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs());
+            }
+        }
+
+        public string LName { get => lName; set => lName = value; }
+        public int Age { get => age; set => age = value; }
+        public int DepID { get => depID; set => depID = value; }
+
+        public Employee()
+        {
+        }
+    }
+
 }
