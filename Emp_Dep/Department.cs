@@ -32,5 +32,10 @@ namespace Emp_Dep
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public override string ToString()
+        {
+            return $"Dep {this.DepName}";
+        }
+
     }
 }
