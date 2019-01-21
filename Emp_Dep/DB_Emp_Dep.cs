@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Emp_Dep
 {
-    class DB_Emp_Dep/*: IEquatable<Department>*/
+    class DB_Emp_Dep                                                             /*: IEquatable<Department>*/
     {
         public ObservableCollection<Employee> DbEmployees { get; set; }
         public ObservableCollection<Department> DbDepartments { get; set; }
@@ -68,30 +68,9 @@ namespace Emp_Dep
         /// <param name="id">Порядковый номер в коллекции</param>
         public void DelEmp(int id)
         {
-            if (DbEmployees.Count > 0)
-            {
-                if (DbEmployees.Count >=id)
-                {
-                   DbEmployees.RemoveAt(id); 
-                }
-            }
+            if (DbEmployees.Count == 0) return;
+            if (DbEmployees.Count <id) return;
+            DbEmployees.RemoveAt(id); 
         }
-
-
-
-
-        //public bool CheckUnic(string nameDep, ObservableCollection<Department> depCollection)
-        //{
-        //    bool unicName = true;
-        //    foreach (var item in depCollection)
-        //    {
-        //        if (nameDep == item.DepName)
-        //        {
-        //            unicName = false;
-        //        }
-        //    }
-
-        //    return unicName;
-        //}
     }
 }
