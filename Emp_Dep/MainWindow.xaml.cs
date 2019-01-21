@@ -27,7 +27,7 @@ namespace Emp_Dep
         public MainWindow()
         {
             InitializeComponent();
-            mainGrid.DataContext = dbEmpDep;
+            mainGrid.DataContext=dbEmpDep;
 
 
             dbEmpDep.AddDep("Приемная");
