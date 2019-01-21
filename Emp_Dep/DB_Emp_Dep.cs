@@ -49,7 +49,13 @@ namespace Emp_Dep
             }
         }
 
-       
+        public void AddEmp(string fName, string lName, int age, int depId)
+        {
+            DbEmployees.Add(new Employee(fName,lName,age,depId));
+
+        }
+
+
 
         //public bool CheckUnic(string nameDep, ObservableCollection<Department> depCollection)
         //{

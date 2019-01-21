@@ -11,33 +11,33 @@ namespace Emp_Dep
 {
     public class Employee : INotifyPropertyChanged
     {
-        public string fName;
-        private string lName;
-        private int age;
-        private int depID;
+        public string _fName;
+        private string _lName;
+        private int _age;
+        private int _depID;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string FName
         {
-            get => fName;
+            get => _fName;
             set
             {
-                fName = value;
+                _fName = value;
                 this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(FName));
             }
         }
 
-        public string LName { get => lName; set => lName = value; }
-        public int Age { get => age; set => age = value; }
-        public int DepID { get => depID; set => depID = value; }
+        public string LName { get => _lName; set => _lName = value; }
+        public int Age { get => _age; set => _age = value; }
+        public int DepID { get => _depID; set => _depID = value; }
 
-        public Employee()
+        public Employee(string _fName, string _lName, int _age, int _depID)
         {
-            FName = fName;
-            LName = lName;
-            Age = age;
-            DepID = depID;
+            FName = _fName;
+            LName = _lName;
+            Age = _age;
+            DepID = _depID;
         }
     }
 

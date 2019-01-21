@@ -10,21 +10,21 @@ namespace Emp_Dep
 {
     class Department: INotifyPropertyChanged
     {
-        private int depId;
-        private string depName;
+        private int _depId;
+        private string _depName;
 
-        public Department(string depName, int depId)
+        public Department(string _depName, int _depId)
         {
-            DepId = depId;
-            DepName = depName;
+            DepId = _depId;
+            DepName = _depName;
         }
 
-        public int DepId { get => depId; set => depId = value; }
+        public int DepId { get => _depId; set => _depId = value; }
         public string DepName
-        { get => depName;
+        { get => _depName;
             set
             {
-                this.depName = value;
+                this._depName = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(DepName));
             }
            
