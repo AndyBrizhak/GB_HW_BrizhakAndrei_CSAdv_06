@@ -7,24 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="496.551" Width="1235.676">
     <Window.Resources>
-
+       
     </Window.Resources>
 
     <Grid>
-
         <Label Content="Работники" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" Width="645"/>
         <Label Content="Департаменты" HorizontalAlignment="Left" Margin="655,16,0,0" VerticalAlignment="Top" Width="327"/>
-
-
-
-        
         <ComboBox x:Name="EmpCombobox" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="334" Height="22"/>
         <ComboBox x:Name="DepCombobox" HorizontalAlignment="Left" Margin="655,47,0,0" VerticalAlignment="Top" Width="261"/>
         <StackPanel HorizontalAlignment="Left" Height="409" Margin="364,47,0,0" VerticalAlignment="Top" Width="273">
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Source= dbEmpDep.DbEmployees), Path=FName}" Height="26"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Source= dbEmpDep.DbEmployees), Path=LName}" Height="28"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Source= dbEmpDep.DbEmployees), Path=Age}" Height="29"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Source= dbEmpDep.DbEmployees), Path=ID}" Height="28"/>
         </StackPanel>
 
 
