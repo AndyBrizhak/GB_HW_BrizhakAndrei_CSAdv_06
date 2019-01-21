@@ -24,7 +24,7 @@ namespace Emp_Dep
             set
             {
                 fName = value;
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs());
+                //this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs());
             }
         }
 
@@ -34,6 +34,10 @@ namespace Emp_Dep
 
         public Employee()
         {
+            FName = fName;
+            LName = lName;
+            Age = age;
+            DepID = depID;
         }
     }
 
