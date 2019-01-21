@@ -25,7 +25,7 @@ namespace Emp_Dep
             set
             {
                 _fName = value;
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(FName));
+                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.FName)));
             }
         }
 
