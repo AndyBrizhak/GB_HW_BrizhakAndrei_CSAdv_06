@@ -22,12 +22,14 @@ namespace Emp_Dep
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+        DB_Emp_Dep dbEmpDep = new DB_Emp_Dep();
 
         public MainWindow()
         {
             InitializeComponent();
-            DB_Emp_Dep dbEmpDep = new DB_Emp_Dep();
+            mainGrid.DataContext = dbEmpDep;
+
+
             dbEmpDep.AddDep("Приемная");
             dbEmpDep.AddDep("Прачечная");
             dbEmpDep.AddDep("Морг");
