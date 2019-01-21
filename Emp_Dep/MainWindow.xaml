@@ -5,10 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Emp_Dep"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="496.551" Width="1235.676">
+    <Window.Resources>
+
+    </Window.Resources>
+
     <Grid>
-        <ListView x:Name="ListViewDbDep"/>
-        <ListView x:Name="ListViewDbEmp"/>
+
+        <Label Content="Работники" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" Width="645"/>
+        <Label Content="Департаменты" HorizontalAlignment="Left" Margin="655,16,0,0" VerticalAlignment="Top" Width="327"/>
+
+
+
+        
+        <ComboBox x:Name="EmpCombobox" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="334" Height="22"/>
+        <ComboBox x:Name="DepCombobox" HorizontalAlignment="Left" Margin="655,47,0,0" VerticalAlignment="Top" Width="261"/>
+        <StackPanel HorizontalAlignment="Left" Height="409" Margin="364,47,0,0" VerticalAlignment="Top" Width="273">
+            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+        </StackPanel>
+
 
 
     </Grid>

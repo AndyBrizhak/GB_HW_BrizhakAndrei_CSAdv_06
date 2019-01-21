@@ -34,7 +34,7 @@ namespace Emp_Dep
 
         public override string ToString()
         {
-            return $"Dep {this.DepName}";
+            return $"{this.DepName}";
         }
 
     }

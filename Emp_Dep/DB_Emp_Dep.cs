@@ -16,7 +16,7 @@ namespace Emp_Dep
         {
             DbEmployees = new ObservableCollection<Employee>();
             DbDepartments = new ObservableCollection<Department>();
-           
+            
         }
 
 

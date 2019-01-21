@@ -22,6 +22,8 @@ namespace Emp_Dep
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,13 +31,13 @@ namespace Emp_Dep
             dbEmpDep.AddDep("Приемная");
             dbEmpDep.AddDep("Прачечная");
             dbEmpDep.AddDep("Морг");
-            dbEmpDep.AddEmp("Василий", "Афанасьев", 25, 1 );
+            dbEmpDep.AddEmp("Василий", "Афанасьев", 25, 1);
             dbEmpDep.AddEmp("Тамара", "Иванова", 32, 2);
             dbEmpDep.AddEmp("Василий", "Пупкин", 48, 3);
 
-            ListViewDbDep.ItemsSource = dbEmpDep.DbDepartments;
-            ListViewDbEmp.ItemsSource = dbEmpDep.DbEmployees;
+            DepCombobox.ItemsSource = dbEmpDep.DbDepartments;
 
+            EmpCombobox.ItemsSource = dbEmpDep.DbEmployees;
 
         }
     }

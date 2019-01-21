@@ -43,11 +43,9 @@ namespace Emp_Dep
 
         public override string ToString()
         {
-            //Person person = new Person { Name = "Tom", Age = 23 };
-
-            //Console.WriteLine("Имя: {0}  Возраст: {1}", person.Name, person.Age);
-            return FName ;
-
+            
+            
+            return $"{FName}\t{LName}";
         }
     }
 
