@@ -49,11 +49,34 @@ namespace Emp_Dep
             }
         }
 
+        /// <summary>
+        /// Добавление работника в коллекцию
+        /// </summary>
+        /// <param name="fName"></param>
+        /// <param name="lName"></param>
+        /// <param name="age"></param>
+        /// <param name="depId"></param>
         public void AddEmp(string fName, string lName, int age, int depId)
         {
-            DbEmployees.Add(new Employee(fName,lName,age,depId));
+            DbEmployees.Add(new Employee(fName, lName, age, depId));
 
         }
+
+        /// <summary>
+        /// Удаляет работника из коллекции
+        /// </summary>
+        /// <param name="id">Порядковый номер в коллекции</param>
+        public void DelEmp(int id)
+        {
+            if (DbEmployees.Count > 0)
+            {
+                if (DbEmployees.Count >=id)
+                {
+                   DbEmployees.RemoveAt(id); 
+                }
+            }
+        }
+
 
 
 
