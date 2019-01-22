@@ -22,13 +22,13 @@ namespace Emp_Dep
     /// </summary>
     public partial class MainWindow : Window
     {
-        DB_Emp_Dep dbEmpDep = new DB_Emp_Dep();
-
+        Rep dbEmpDep;
         public MainWindow()
         {
             InitializeComponent();
+            dbEmpDep = new Rep();
             mainGrid.DataContext=dbEmpDep;
-
+            this.DataContext = dbEmpDep;
 
             dbEmpDep.AddDep("Приемная");
             dbEmpDep.AddDep("Прачечная");
@@ -39,7 +39,12 @@ namespace Emp_Dep
 
             DepCombobox.ItemsSource = dbEmpDep.DbDepartments;
 
-            EmpCombobox.ItemsSource = dbEmpDep.DbEmployees;
+            //EmpCombobox.ItemsSource = dbEmpDep.DbEmployees;
+
+        }
+
+        private void DepCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }

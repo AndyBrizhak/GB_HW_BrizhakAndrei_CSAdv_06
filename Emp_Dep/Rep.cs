@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Emp_Dep
 {
-    class DB_Emp_Dep                                                             /*: IEquatable<Department>*/
+    class Rep                                                             /*: IEquatable<Department>*/
     {
         public ObservableCollection<Employee> DbEmployees { get; set; }
         public ObservableCollection<Department> DbDepartments { get; set; }
 
-        public DB_Emp_Dep()
+        public Rep()
         {
             DbEmployees = new ObservableCollection<Employee>();
             DbDepartments = new ObservableCollection<Department>();

@@ -11,18 +11,11 @@
     </Window.Resources>
 
     <Grid x:Name="mainGrid">
-        <Label Content="Работники" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" Width="645"/>
-        <Label Content="Департаменты" HorizontalAlignment="Left" Margin="655,16,0,0" VerticalAlignment="Top" Width="327"/>
-        <ComboBox x:Name="EmpCombobox" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="334" Height="22"/>
-        <ComboBox x:Name="DepCombobox" HorizontalAlignment="Left" Margin="655,47,0,0" VerticalAlignment="Top" Width="261"/>
-        <StackPanel x:Name="EmpStackPanel" HorizontalAlignment="Left" Height="409" Margin="364,47,0,0" VerticalAlignment="Top" Width="273">
-            <TextBlock Text="{Binding Source= DbEmployees, Path=FName, Mode=TwoWay}" Height="26"/>
-            <TextBlock TextWrapping="Wrap" Text="{Binding Source= DbEmployees, Path=LName,Mode=TwoWay}" Height="28"/>
-            <TextBlock TextWrapping="Wrap" Text="{Binding Source= DbEmployees, Path=Age,Mode=TwoWay}" Height="29"/>
-            <TextBlock TextWrapping="Wrap" Text="Test" Height="28"/>
-        </StackPanel>
-
-
-
+        <Label Content="Департаменты" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" Width="327"/>
+        <ComboBox x:Name="DepCombobox" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="327" 
+                  SelectedIndex="0"
+         SelectionChanged="DepCombobox_SelectionChanged" Height="24"
+         />
+        
     </Grid>
 </Window>
