@@ -15,18 +15,21 @@ using System.Windows.Shapes;
 namespace Emp_Dep
 {
     /// <summary>
-    /// Логика взаимодействия для EditDepWindow.xaml
+    /// Логика взаимодействия для EditEmpWindow.xaml
     /// </summary>
-    public partial class EditDepWindow : Window
+    public partial class EditEmpWindow : Window
     {
-        public EditDepWindow(int i, Rep dbEmpDep)
+        public EditEmpWindow(int i, Rep dbEmpDep)
         {
             InitializeComponent();
             btn.Click += delegate
             {
-                dbEmpDep.DbDepartments[i].DepName = txt.Text;
+               var selEmp= dbEmpDep.DbEmployees.Single(e => e.GetHashCode() == i);
+                selEmp.FName = txt.Text; 
+                //dbEmpDep.DbEmployees[i].FName = txt.Text;
                 this.DialogResult = true;
             };
+
         }
     }
 }

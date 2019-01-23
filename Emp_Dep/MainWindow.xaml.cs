@@ -44,6 +44,13 @@ namespace Emp_Dep
                 new EditDepWindow((DepCombobox.SelectedItem as Department).DepId, dbEmpDep).ShowDialog();
             };
 
+            ListEmp.MouseDoubleClick += ListEmp_MouseDoubleClick;
+        }
+
+        private void ListEmp_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            //throw new NotImplementedException();
+            new EditEmpWindow((ListEmp.SelectedItem as Employee).GetHashCode(), dbEmpDep).ShowDialog();
         }
 
         private void DepCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
