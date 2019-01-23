@@ -41,8 +41,7 @@ namespace Emp_Dep
 
             DepEditBtn.Click += delegate
             {
-                //Debug.WriteLine((cmbDept.SelectedItem as Department).DepartmentId);
-                new EditWindow((cmbDept.SelectedItem as Department).DepartmentId, data).ShowDialog();
+                new EditDepWindow((DepCombobox.SelectedItem as Department).DepId, dbEmpDep).ShowDialog();
             };
 
         }
