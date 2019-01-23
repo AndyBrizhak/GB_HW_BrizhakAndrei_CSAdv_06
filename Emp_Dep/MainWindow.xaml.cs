@@ -55,7 +55,7 @@ namespace Emp_Dep
 
         private void DepCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            ListEmp.ItemsSource = dbEmpDep.DbEmployees.Where(w => w.DepID ==(DepCombobox.SelectedValue as Department)?.DepId);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
