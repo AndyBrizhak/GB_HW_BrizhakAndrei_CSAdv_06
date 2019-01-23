@@ -49,7 +49,7 @@ namespace Emp_Dep
 
         private void ListEmp_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            //throw new NotImplementedException();
+           
             new EditEmpWindow((ListEmp.SelectedItem as Employee).GetHashCode(), dbEmpDep).ShowDialog();
         }
 
@@ -65,8 +65,8 @@ namespace Emp_Dep
 
         private void ButtonAddDep_Click(object sender, RoutedEventArgs e)
         {
-
-            dbEmpDep.AddDep();
+            
+            new AddDepWindow(dbEmpDep).ShowDialog();
         }
     }
 }
