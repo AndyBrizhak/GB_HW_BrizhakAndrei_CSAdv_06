@@ -24,7 +24,7 @@ namespace Emp_Dep
             InitializeComponent();
             btn.Click += delegate
             {
-                dbEmpDep.DbDepartments[i].DepName = txt.Text;
+                dbEmpDep.DbDepartments[i-1].DepName = txt.Text;
                 this.DialogResult = true;
             };
         }
