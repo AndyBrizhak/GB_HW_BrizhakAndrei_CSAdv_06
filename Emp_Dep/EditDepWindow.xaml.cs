@@ -15,13 +15,18 @@ using System.Windows.Shapes;
 namespace Emp_Dep
 {
     /// <summary>
-    /// Логика взаимодействия для EditWindow.xaml
+    /// Логика взаимодействия для EditDepWindow.xaml
     /// </summary>
-    public partial class EditWindow : Window
+    public partial class EditDepWindow : Window
     {
-        public EditWindow()
+        public EditDepWindow(int i, Rep rep)
         {
             InitializeComponent();
+            btn.Click += delegate
+            {
+                rep.DbDepartments[i].DepName = txt.Text;
+                this.DialogResult = true;
+            };
         }
     }
 }
