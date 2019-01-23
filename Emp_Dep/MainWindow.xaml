@@ -41,8 +41,12 @@
         </ListView>
 
         <Button Content="Удалить департамент" HorizontalAlignment="Left"
-                Margin="419,51,0,0" VerticalAlignment="Top" Width="311" Click="Button_Click"
+                Margin="419,51,0,0" VerticalAlignment="Top" Width="311" Click="ButtonDelDep_Click"
         />
+        <Button Content="Добавить департамент" HorizontalAlignment="Left"
+                Margin="419,101,0,0" VerticalAlignment="Top" Width="311" Click="ButtonAddDep_Click"
+        />
+
 
         <TextBox 
                  HorizontalAlignment="Left"

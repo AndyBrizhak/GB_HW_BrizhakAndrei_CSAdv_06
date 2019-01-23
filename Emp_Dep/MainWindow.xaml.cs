@@ -58,9 +58,15 @@ namespace Emp_Dep
             ListEmp.ItemsSource = dbEmpDep.DbEmployees.Where(w => w.DepID ==(DepCombobox.SelectedValue as Department)?.DepId);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonDelDep_Click(object sender, RoutedEventArgs e)
         {
             dbEmpDep.DelDep((DepCombobox.SelectedValue as Department).DepId);
+        }
+
+        private void ButtonAddDep_Click(object sender, RoutedEventArgs e)
+        {
+
+            dbEmpDep.AddDep();
         }
     }
 }
