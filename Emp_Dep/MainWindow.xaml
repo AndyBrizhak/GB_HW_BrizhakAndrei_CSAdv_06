@@ -10,12 +10,35 @@
       
     </Window.Resources>
 
-    <Grid x:Name="mainGrid">
+    <Grid x:Name="MainGrid">
         <Label Content="Департаменты" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" Width="327"/>
         <ComboBox x:Name="DepCombobox" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="327" 
                   SelectedIndex="0"
-         SelectionChanged="DepCombobox_SelectionChanged" Height="24"
-         />
-        
+                  ItemsSource="{Binding DbDepartments}"
+                  SelectionChanged="DepCombobox_SelectionChanged" Height="24"
+                  ToolTip="Выберете департамент">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                <TextBlock Text="{Binding DepName}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <ListView x:Name="ListEmpl" Margin="10,144,891,10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat=" {0} | {1}">
+                                <Binding Path="FName"/>
+                                <Binding Path="LName"/>
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListView>
+
+
     </Grid>
 </Window>
