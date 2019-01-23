@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace Emp_Dep
 {
-    class Department: INotifyPropertyChanged
+   public class Department: INotifyPropertyChanged
     {
         private int _depId;
         private string _depName;

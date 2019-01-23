@@ -22,7 +22,7 @@ namespace Emp_Dep
     /// </summary>
     public partial class MainWindow : Window
     {
-        Rep dbEmpDep;
+       public Rep dbEmpDep;
         public MainWindow()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace Emp_Dep
             dbEmpDep.AddEmp("Тамара", "Иванова", 32, 2);
             dbEmpDep.AddEmp("Василий", "Пупкин", 48, 3);
 
-            DepCombobox.ItemsSource = dbEmpDep.DbDepartments;
+            //DepCombobox.ItemsSource = dbEmpDep.DbDepartments;
 
             DepEditBtn.Click += delegate
             {
@@ -56,6 +56,11 @@ namespace Emp_Dep
         private void DepCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            dbEmpDep.DelDep((DepCombobox.SelectedValue as Department).DepId);
         }
     }
 }
