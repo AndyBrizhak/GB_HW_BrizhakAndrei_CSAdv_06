@@ -39,7 +39,11 @@ namespace Emp_Dep
 
             DepCombobox.ItemsSource = dbEmpDep.DbDepartments;
 
-            //EmpCombobox.ItemsSource = dbEmpDep.DbEmployees;
+            DepEditBtn.Click += delegate
+            {
+                //Debug.WriteLine((cmbDept.SelectedItem as Department).DepartmentId);
+                new EditWindow((cmbDept.SelectedItem as Department).DepartmentId, data).ShowDialog();
+            };
 
         }
 
