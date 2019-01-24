@@ -55,10 +55,16 @@
                                                     Path=SelectedValue.FName, 
                                                     UpdateSourceTrigger=PropertyChanged,
                                                     Mode=TwoWay}" 
-                 VerticalAlignment="Top" Width="311"/>
+                 VerticalAlignment="Top" Width="311"
+        />
 
         <Button x:Name="DepEditBtn" Content="Переименовать департамент" HorizontalAlignment="Left" Margin="419,76,0,0"
-                VerticalAlignment="Top" Width="311" />
+                VerticalAlignment="Top" Width="311" 
+        />
+
+        <Button Content="Добавить сотрудника" HorizontalAlignment="Left"
+                Margin="419,101,0,0" VerticalAlignment="Top" Width="311" Click="ButtonAddEmp_Click"
+        />
 
     </Grid>
 </Window>
