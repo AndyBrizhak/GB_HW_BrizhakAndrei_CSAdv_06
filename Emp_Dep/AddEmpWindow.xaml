@@ -14,8 +14,8 @@
             <TextBlock x:Name="LName" TextWrapping="Wrap" Text="Фамилия" Margin="10,0,0,0"/>
             <TextBox x:Name="txtBoxLName" Margin="10"/>
 
-            <TextBlock x:Name="Age" TextWrapping="Wrap" Text="Возраст" Margin="10,0,0,0"/>
-            <TextBox x:Name="txtBoxAge" Margin="10"/>
+            <TextBlock x:Name="Age" TextWrapping="Wrap" Text="Возраст (Введите число полных  лет цифрами)" Margin="10,0,0,0"/>
+            <TextBox x:Name="txtBoxAge" Margin="10,10,395,10" Text=""/>
 
 
             <Button x:Name="btnAddEmp" Content="Добавить" Margin="10"/>

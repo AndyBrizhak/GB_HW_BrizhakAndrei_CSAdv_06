@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace Emp_Dep
 {
@@ -56,10 +57,12 @@ namespace Emp_Dep
         /// <param name="fName"></param>
         /// <param name="lName"></param>
         /// <param name="age"></param>
+        /// <param name="strAge"></param>
         /// <param name="depId"></param>
-        public void AddEmp(string fName, string lName, int age, int depId)
+        public void AddEmp(string fName, string lName, string strAge, int depId)
         {
-            DbEmployees.Add(new Employee(fName, lName, age, depId));
+            //var age = int.Parse(strAge);
+            DbEmployees.Add(new Employee(fName, lName, strAge, depId));
 
         }
 

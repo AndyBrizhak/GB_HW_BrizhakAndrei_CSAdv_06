@@ -33,12 +33,12 @@ namespace Emp_Dep
             dbEmpDep.AddDep("Приемная");
             dbEmpDep.AddDep("Прачечная");
             dbEmpDep.AddDep("Морг");
-            dbEmpDep.AddEmp("Василий", "Афанасьев", 25, 1);
-            dbEmpDep.AddEmp("Федор", "Ивлев", 25, 1);
-            dbEmpDep.AddEmp("Тамара", "Иванова", 32, 2);
-            dbEmpDep.AddEmp("Валентина", "Кошелева", 32, 2);
-            dbEmpDep.AddEmp("Василий", "Пупкин", 48, 3);
-            dbEmpDep.AddEmp("Иван", "Ложкин", 48, 3);
+            dbEmpDep.AddEmp("Василий", "Афанасьев", 25.ToString(), 1);
+            dbEmpDep.AddEmp("Федор", "Ивлев", 25.ToString(), 1);
+            dbEmpDep.AddEmp("Тамара", "Иванова", 32.ToString(), 2);
+            dbEmpDep.AddEmp("Валентина", "Кошелева", 32.ToString(), 2);
+            dbEmpDep.AddEmp("Василий", "Пупкин", 48.ToString(), 3);
+            dbEmpDep.AddEmp("Иван", "Ложкин", 48.ToString(), 3);
 
             //DepCombobox.ItemsSource = dbEmpDep.DbDepartments;
 
@@ -75,7 +75,7 @@ namespace Emp_Dep
         private void ButtonAddEmp_Click(object sender, RoutedEventArgs e)
         {
 
-            new AddDepWindow(dbEmpDep).ShowDialog();
+            new AddEmpWindow(dbEmpDep,(DepCombobox.SelectedItem as Department).DepId).ShowDialog();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Emp_Dep
     {
         public string _fName;
         private string _lName;
-        private int _age;
+        private string _age;
         private int _depID;
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -30,10 +30,10 @@ namespace Emp_Dep
         }
 
         public string LName { get => _lName; set => _lName = value; }
-        public int Age { get => _age; set => _age = value; }
+        public string Age { get => _age; set => _age = value; }
         public int DepID { get => _depID; set => _depID = value; }
 
-        public Employee(string _fName, string _lName, int _age, int _depID)
+        public Employee(string _fName, string _lName, string _age, int _depID)
         {
             FName = _fName;
             LName = _lName;
