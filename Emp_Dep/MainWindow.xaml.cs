@@ -58,31 +58,46 @@ namespace Emp_Dep
 
         private void DepCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ListEmp.ItemsSource = dbEmpDep.DbEmployees.Where(w => w.DepID ==(DepCombobox.SelectedValue as Department)?.DepId);
+            RefreshListEmp();
+        }
+
+        /// <summary>
+        /// Обновление списка сотрудников в департаменте
+        /// </summary>
+        private void RefreshListEmp()
+        {
+            ListEmp.ItemsSource = dbEmpDep.DbEmployees.Where(w => w.DepID == (DepCombobox.SelectedValue as Department)?.DepId);
         }
 
         private void ButtonDelDep_Click(object sender, RoutedEventArgs e)
         {
             dbEmpDep.DelDep((DepCombobox.SelectedValue as Department).DepId);
+            RefreshListEmp();
         }
 
         private void ButtonAddDep_Click(object sender, RoutedEventArgs e)
         {
             
             new AddDepWindow(dbEmpDep).ShowDialog();
+            RefreshListEmp();
         }
 
         private void ButtonAddEmp_Click(object sender, RoutedEventArgs e)
         {
 
             new AddEmpWindow(dbEmpDep,(DepCombobox.SelectedItem as Department).DepId).ShowDialog();
+            RefreshListEmp();
         }
 
         private void ButtonDelEmp_Click(object sender, RoutedEventArgs e)
         {
 
-            //new AddEmpWindow(dbEmpDep, (DepCombobox.SelectedItem as Department).DepId).ShowDialog();
-            dbEmpDep.DelEmp(ListEmp.SelectedIndex);
+            Employee selEmployee = ListEmp.SelectedItem as Employee;
+            //int empHashCode = (ListEmp.SelectedItem as Employee).GetHashCode();
+            //var selEmp = dbEmpDep.DbEmployees.Single(el => el.GetHashCode() == empHashCode);
+
+            dbEmpDep.DelEmp(selEmployee);
+            RefreshListEmp();
         }
 
     }

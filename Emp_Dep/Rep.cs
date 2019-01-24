@@ -66,15 +66,17 @@ namespace Emp_Dep
 
         }
 
+        
         /// <summary>
         /// Удаляет работника из коллекции
         /// </summary>
-        /// <param name="id">Порядковый номер в коллекции</param>
-        public void DelEmp(int id)
+        /// <param name="selEmployee"></param>
+        public void DelEmp(Employee selEmployee)
         {
             if (DbEmployees.Count == 0) return;
-            if (DbEmployees.Count <id) return;
-            DbEmployees.RemoveAt(id); 
+            if (!DbEmployees.Contains(selEmployee)) return;
+            //DbEmployees.RemoveAt(id);
+            DbEmployees.Remove(selEmployee);
         }
     }
 }
