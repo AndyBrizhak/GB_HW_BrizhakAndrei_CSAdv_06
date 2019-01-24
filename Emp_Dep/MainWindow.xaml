@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Emp_Dep"
         mc:Ignorable="d"
-        Title="MainWindow" Height="496.551" Width="1235.676">
+        Title="MainWindow" Height="496.551" Width="801.676">
     <Window.Resources>
 
     </Window.Resources>
@@ -24,7 +24,7 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
 
-        <ListView x:Name="ListEmp" Margin="10,144,891,10">
+        <ListView x:Name="ListEmp" Margin="10,144,457,10">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock>
@@ -64,6 +64,10 @@
 
         <Button Content="Добавить сотрудника" HorizontalAlignment="Left"
                 Margin="419,190,0,0" VerticalAlignment="Top" Width="311" Click="ButtonAddEmp_Click"
+        />
+
+        <Button Content="Удалить сотрудника" HorizontalAlignment="Left"
+                Margin="419,215,0,0" VerticalAlignment="Top" Width="311" Click="ButtonDelEmp_Click"
         />
 
     </Grid>

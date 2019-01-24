@@ -77,5 +77,13 @@ namespace Emp_Dep
 
             new AddEmpWindow(dbEmpDep,(DepCombobox.SelectedItem as Department).DepId).ShowDialog();
         }
+
+        private void ButtonDelEmp_Click(object sender, RoutedEventArgs e)
+        {
+
+            //new AddEmpWindow(dbEmpDep, (DepCombobox.SelectedItem as Department).DepId).ShowDialog();
+            dbEmpDep.DelEmp(ListEmp.SelectedIndex);
+        }
+
     }
 }
