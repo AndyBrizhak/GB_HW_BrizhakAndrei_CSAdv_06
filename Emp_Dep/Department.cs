@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace Emp_Dep
 {
-   public class Department: INotifyPropertyChanged
+    public class Department: INotifyPropertyChanged
     {
         private int _depId;
         private string _depName;
